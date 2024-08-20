@@ -1,0 +1,12 @@
+.filtro {
+  margin: 1em;
+}
+
+.filtro-input,
+.filtro-button {
+  font-size: 18px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px #fcfcfcce solid;
+  padding: 3px;
+}
