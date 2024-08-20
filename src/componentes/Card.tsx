@@ -24,14 +24,19 @@ function Card() {
     <div id="gallery" className="gallery">
       {Lista.map((funko) => (
         <div className={String(conter(funko.piezas))}>
-          <label className="gallery__title">{funko.nombre}</label>
-          <img
-            className="gallery__img"
-            src={String(funko.ruta)}
-            alt={String(funko.nombre)}
-          />
-          <h2 className="agotado">Agotado</h2>
-          <label className="gallery__precio">{funko.precio}</label>
+          <div className="card__fondo">
+            <div className="cantidad-funko">
+              {funko.piezas >= 1 ? funko.piezas : ""}
+            </div>
+            <label className="gallery__title">{funko.nombre}</label>
+            <img
+              className="gallery__img"
+              src={String(funko.ruta)}
+              alt={String(funko.nombre)}
+            />
+            <h2 className="agotado">Agotado</h2>
+            <label className="gallery__precio">{"$" + funko.precio}</label>
+          </div>
         </div>
       ))}
     </div>
