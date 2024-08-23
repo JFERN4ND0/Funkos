@@ -8,7 +8,7 @@ function Gallery() {
       <div className="filtro">
         <input className="filtro-input"></input>
         <button type="submit" className="filtro-button">
-          FILTRAR
+          BUSCAR
         </button>
       </div>
       <Card />

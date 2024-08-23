@@ -1,16 +1,24 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  /* background-image: radial-gradient(circle, #b274d691, #290b42c0); */
-  background-repeat: no-repeat;
-  /* background-color: rgb(121, 163, 199); */
-  background-color: rgba(21, 101, 175, 0.74);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: radial-gradient(circle at bottom, navy 0, rgb(12, 12, 12) 100%);
+  margin: 0;
+  font-family: sans-serif;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.space {
+  background: rgba(128, 0, 128, 0.1) center / 100% 200% round;
 }
