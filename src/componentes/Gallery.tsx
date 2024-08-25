@@ -1,5 +1,17 @@
+import { useEffect } from "react";
+import { searchFunkos } from "../datos/FunkosApi";
 import Card from "./Card";
 import "./Gallery.css";
+
+useEffect(() => {
+  search();
+}, []);
+
+let lista: Funko[];
+
+const search = () => {
+  lista = searchFunkos();
+};
 
 function Gallery() {
   return (
@@ -11,7 +23,17 @@ function Gallery() {
           BUSCAR
         </button>
       </div>
-      <Card />
+      <div id="gallery" className="gallery">
+        {lista.map((funko) => (
+          <Card
+            nombre={funko.nombre}
+            ruta={funko.ruta}
+            precio={funko.precio}
+            piezas={funko.piezas}
+            estado={funko.estado}
+          />
+        ))}
+      </div>
     </div>
   );
 }
