@@ -1,30 +1,61 @@
-import { useEffect } from "react";
-import { searchFunkos } from "../datos/FunkosApi";
+import { useEffect, useState } from "react";
+import {
+  searchFunkoEstado,
+  searchFunkoName,
+  searchFunkos,
+} from "../datos/FunkosApi";
 import Card from "./Card";
 import "./Gallery.css";
+// import Lista from "../datos/Funkos.tsx";
 
-useEffect(() => {
-  search();
-}, []);
+const Gallery: React.FC = () => {
+  const [funkos, setFunkos] = useState<Funko[]>([]);
+  useEffect(() => {
+    search();
+  }, []);
 
-let lista: Funko[];
+  const search = () => {
+    const lista: Funko[] = searchFunkos();
+    setFunkos(lista);
+  };
 
-const search = () => {
-  lista = searchFunkos();
-};
+  const buscar = (filtro: String) => {
+    let lis;
+    if (filtro === "preventa" || filtro === "venta" || filtro === "agotado") {
+      lis = searchFunkoEstado(String(filtro));
+      setFunkos(lis);
+    } else {
+      lis = searchFunkoName(String(filtro));
+      setFunkos(lis);
+    }
+  };
 
-function Gallery() {
+  // function Gallery() {
   return (
     <div id="gallery" className="Page">
       <h1 className="title">EL FANTASMA DE LOS FUNKOS</h1>
       <div className="filtro">
-        <input className="filtro-input"></input>
-        <button type="submit" className="filtro-button">
-          BUSCAR
-        </button>
+        <form
+          onSubmit={(ev) => {
+            ev.preventDefault();
+            // buscar(ev.target.search.value);
+            buscar(ev.target[0].value);
+            console.log(ev.target[0].value);
+          }}
+        >
+          <input
+            type="text"
+            name="search"
+            className="filtro-input"
+            autoComplete="off"
+          ></input>
+          <button type="submit" className="filtro-button">
+            BUSCAR
+          </button>
+        </form>
       </div>
       <div id="gallery" className="gallery">
-        {lista.map((funko) => (
+        {funkos.map((funko) => (
           <Card
             nombre={funko.nombre}
             ruta={funko.ruta}
@@ -34,8 +65,10 @@ function Gallery() {
           />
         ))}
       </div>
+      {/* <Card /> */}
     </div>
   );
-}
+  // }
+};
 
 export default Gallery;

@@ -1,3 +1,4 @@
+// import Lista from "../datos/Funkos.tsx";
 import "./Card.css";
 
 const conter = (cant: number) => {
@@ -28,7 +29,7 @@ const estadoP = (pieza: number, estado: String) => {
 function Card(props: Funko) {
   return (
     // <div id="gallery" className="gallery">
-    //   {lista.map((funko) => (
+    //   {Lista.map((props) => (
     <div className={String(conter(props.piezas))}>
       <div className="card__fondo">
         <div className={String(preventa(props.estado))}>
