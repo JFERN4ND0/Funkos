@@ -26,7 +26,7 @@ function Card() {
         <div className={String(conter(funko.piezas))}>
           <div className="card__fondo">
             <div className="cantidad-funko">
-              {funko.piezas >= 1 ? funko.piezas : ""}
+              {funko.piezas >= 1 ? "x" + funko.piezas : ""}
             </div>
             <label className="gallery__title">{funko.nombre}</label>
             <img

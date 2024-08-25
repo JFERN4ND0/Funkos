@@ -1,5 +1,5 @@
 .filtro {
-  margin: 1em;
+  margin-bottom: 4em;
 }
 
 .filtro-input,
@@ -11,7 +11,13 @@
   padding: 3px;
 }
 
+@font-face {
+  font-family: title;
+  src: url("../assets/fonts/Mackenzin.otf");
+}
+
 .title {
   /* font-family: cursive; */
-  font-family: "Times New Roman", Times, serif;
+  /* font-family: "Times New Roman", Times, serif; */
+  font-family: title;
 }
