@@ -10,6 +10,7 @@ import "./Gallery.css";
 
 const Gallery: React.FC = () => {
   const [funkos, setFunkos] = useState<Funko[]>([]);
+
   useEffect(() => {
     search();
   }, []);
@@ -19,13 +20,15 @@ const Gallery: React.FC = () => {
     setFunkos(lista);
   };
 
-  const buscar = (filtro: String) => {
-    let lis;
-    if (filtro === "preventa" || filtro === "venta" || filtro === "agotado") {
-      lis = searchFunkoEstado(String(filtro));
+  const buscar = (filtro: string) => {
+    const est = filtro.toLowerCase();
+    if (est === "preventa" || est === "venta" || est === "agotado") {
+      const lis = searchFunkoEstado(String(est));
+      console.log(lis);
       setFunkos(lis);
     } else {
-      lis = searchFunkoName(String(filtro));
+      const lis = searchFunkoName(String(filtro));
+      console.log(lis);
       setFunkos(lis);
     }
   };
@@ -38,9 +41,7 @@ const Gallery: React.FC = () => {
         <form
           onSubmit={(ev) => {
             ev.preventDefault();
-            // buscar(ev.target.search.value);
-            buscar(ev.target[0].value);
-            console.log(ev.target[0].value);
+            buscar(ev.target.search.value);
           }}
         >
           <input

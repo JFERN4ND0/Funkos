@@ -7,10 +7,14 @@ export function searchFunkos() {
 
 export function searchFunkoName(nombre: string) {
   let funkos = searchFunkos();
-  return funkos.find((funko: Funko) => funko.nombre === nombre);
+  const listado = funkos.filter((funko: Funko) =>
+    funko.nombre.toLowerCase().includes(nombre.toLowerCase())
+  );
+  return listado;
 }
 
 export function searchFunkoEstado(estado: string) {
   let funkos = searchFunkos();
-  return funkos.find((funko: Funko) => funko.estado === estado);
+  const listado = funkos.filter((funko: Funko) => funko.estado === estado);
+  return listado;
 }

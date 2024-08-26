@@ -20,7 +20,7 @@ const Lista: Funko[] = [
     ruta: raiz + "piterman/piterman.png",
     precio: 150,
     piezas: 0,
-    estado: "preventa",
+    estado: "agotado",
   },
   {
     nombre: "Nezuko",
@@ -34,7 +34,7 @@ const Lista: Funko[] = [
     ruta: raiz + "piterman/piterman.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Nezuko",
@@ -76,7 +76,7 @@ const Lista: Funko[] = [
     ruta: raiz + "NezukoKamado/Nezuko.png",
     precio: 150,
     piezas: 0,
-    estado: "preventa",
+    estado: "agotado",
   },
   {
     nombre: "Piterman2424",
@@ -97,7 +97,7 @@ const Lista: Funko[] = [
     ruta: raiz + "piterman/piterman.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Piterman2424",
@@ -139,14 +139,14 @@ const Lista: Funko[] = [
     ruta: raiz + "NezukoKamado/Nezuko.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Piterman2424",
     ruta: raiz + "piterman/piterman.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Nezuko",
@@ -188,7 +188,7 @@ const Lista: Funko[] = [
     ruta: raiz + "NezukoKamado/Nezuko.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Piterman2424",
@@ -209,7 +209,7 @@ const Lista: Funko[] = [
     ruta: raiz + "piterman/piterman.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Piterman2424",
@@ -251,14 +251,14 @@ const Lista: Funko[] = [
     ruta: raiz + "NezukoKamado/Nezuko.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Piterman2424",
     ruta: raiz + "piterman/piterman.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Nezuko",
@@ -300,14 +300,14 @@ const Lista: Funko[] = [
     ruta: raiz + "NezukoKamado/Nezuko.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
   {
     nombre: "Piterman2424",
     ruta: raiz + "piterman/piterman.png",
     precio: 150,
     piezas: 0,
-    estado: "preventa",
+    estado: "agotado",
   },
   {
     nombre: "Nezuko",
@@ -335,7 +335,7 @@ const Lista: Funko[] = [
     ruta: raiz + "NezukoKamado/Nezuko.png",
     precio: 150,
     piezas: 0,
-    estado: "venta",
+    estado: "agotado",
   },
 ];
 
