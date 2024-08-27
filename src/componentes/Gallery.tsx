@@ -37,14 +37,14 @@ const Gallery: React.FC = () => {
       <h1 className="title">EL FANTASMA DE LOS FUNKOS</h1>
       <div className="filtro">
         <form
-          onSubmit={(ev) => {
+          onSubmit={(ev: React.FormEvent<HTMLFormElement>) => {
             ev.preventDefault();
             buscar(ev.target[0].value);
           }}
         >
           <input
             type="text"
-            name="search"
+            name="filtro"
             className="filtro-input"
             autoComplete="off"
           ></input>
