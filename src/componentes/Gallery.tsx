@@ -20,16 +20,16 @@ const Gallery: React.FC = () => {
     setFunkos(lista);
   };
 
-  const buscar = (filtro: string) => {
-    const est = filtro.toLowerCase();
-    if (est === "preventa" || est === "venta" || est === "agotado") {
-      const lis = searchFunkoEstado(String(est));
-      setFunkos(lis);
-    } else {
-      const lis = searchFunkoName(String(filtro));
-      setFunkos(lis);
-    }
-  };
+  // const buscar = (filtro: string) => {
+  //   const est = filtro.toLowerCase();
+  //   if (est === "preventa" || est === "venta" || est === "agotado") {
+  //     const lis = searchFunkoEstado(String(est));
+  //     setFunkos(lis);
+  //   } else {
+  //     const lis = searchFunkoName(String(filtro));
+  //     setFunkos(lis);
+  //   }
+  // };
 
   // function Gallery() {
   return (
