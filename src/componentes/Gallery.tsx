@@ -39,13 +39,12 @@ const Gallery: React.FC = () => {
         <form
           onSubmit={(ev: React.FormEvent<HTMLFormElement>) => {
             ev.preventDefault();
-            buscar(search);
+            buscar(ev.target.filtro.value);
           }}
         >
           <input
             type="text"
-            id="search"
-            name="search"
+            name="filtro"
             className="filtro-input"
             autoComplete="off"
           ></input>
