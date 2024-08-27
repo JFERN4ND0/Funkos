@@ -24,11 +24,9 @@ const Gallery: React.FC = () => {
     const est = filtro.toLowerCase();
     if (est === "preventa" || est === "venta" || est === "agotado") {
       const lis = searchFunkoEstado(String(est));
-      console.log(lis);
       setFunkos(lis);
     } else {
       const lis = searchFunkoName(String(filtro));
-      console.log(lis);
       setFunkos(lis);
     }
   };
