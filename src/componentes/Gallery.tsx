@@ -39,7 +39,7 @@ const Gallery: React.FC = () => {
         <form
           onSubmit={(ev: React.FormEvent<HTMLFormElement>) => {
             ev.preventDefault();
-            buscar(ev.target[0].value);
+            // buscar(ev.target[0].value);
           }}
         >
           <input
