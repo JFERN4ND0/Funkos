@@ -44,6 +44,7 @@ const Gallery: React.FC = () => {
         >
           <input
             type="text"
+            id="search"
             name="search"
             className="filtro-input"
             autoComplete="off"
