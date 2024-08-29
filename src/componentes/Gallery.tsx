@@ -6,7 +6,6 @@ import {
 } from "../datos/FunkosApi";
 import Card from "./Card";
 import "./Gallery.css";
-// import Lista from "../datos/Funkos.tsx";
 
 const Gallery: React.FC = () => {
   const [funkos, setFunkos] = useState<Funko[]>([]);
@@ -20,26 +19,29 @@ const Gallery: React.FC = () => {
     setFunkos(lista);
   };
 
-  // const buscar = (filtro: string) => {
-  //   const est = filtro.toLowerCase();
-  //   if (est === "preventa" || est === "venta" || est === "agotado") {
-  //     const lis = searchFunkoEstado(String(est));
-  //     setFunkos(lis);
-  //   } else {
-  //     const lis = searchFunkoName(String(filtro));
-  //     setFunkos(lis);
-  //   }
-  // };
+  const buscar = (filtro: string) => {
+    const est = filtro.toLowerCase();
+    if (est === "preventa" || est === "venta" || est === "agotado") {
+      const lis = searchFunkoEstado(String(est));
+      setFunkos(lis);
+    } else {
+      const lis = searchFunkoName(String(filtro));
+      setFunkos(lis);
+    }
+  };
 
-  // function Gallery() {
   return (
     <div id="gallery" className="Page">
       <h1 className="title">EL FANTASMA DE LOS FUNKOS</h1>
       <div className="filtro">
         <form
-          onSubmit={(ev: React.FormEvent<HTMLFormElement>) => {
+          onSubmit={(ev) => {
             ev.preventDefault();
-            // buscar(ev.target[0].value);
+            const formulario = ev.target as HTMLFormElement;
+            const formData = new FormData(formulario);
+            const formJson = Object.fromEntries(formData.entries());
+            // buscar(String(ev.target[0].value));
+            buscar(String(formJson.filtro));
           }}
         >
           <input
@@ -64,7 +66,6 @@ const Gallery: React.FC = () => {
           />
         ))}
       </div>
-      {/* <Card /> */}
     </div>
   );
   // }
