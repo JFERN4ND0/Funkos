@@ -19,7 +19,7 @@ const preventa = (estado: String) => {
 
 const estadoP = (pieza: number, estado: String) => {
   let est = "";
-  if (pieza >= 1 && estado === "venta") {
+  if (pieza >= 1 && estado === "disponible") {
     est = "x" + pieza;
     return est;
   }
