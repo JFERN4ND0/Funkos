@@ -32,7 +32,15 @@ const Gallery: React.FC = () => {
 
   return (
     <div id="gallery" className="Page">
-      <h1 className="title">EL FANTASMA DE LOS FUNKOS</h1>
+      <div className="titulo__fondo">
+        <div className="titulo">
+          <img
+            className="isotipo"
+            src="../assets/images/logos/ISOTIPO_BLANCO.png"
+            alt="ISOTIPOBLANCO"
+          />
+        </div>
+      </div>
       <div className="filtro">
         <form
           onSubmit={(ev) => {
@@ -59,6 +67,7 @@ const Gallery: React.FC = () => {
         {funkos.map((funko) => (
           <Card
             nombre={funko.nombre}
+            serie={funko.serie}
             ruta={funko.ruta}
             precio={funko.precio}
             piezas={funko.piezas}

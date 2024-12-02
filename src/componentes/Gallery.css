@@ -16,8 +16,34 @@
   src: url("../assets/fonts/Mackenzin.otf");
 }
 
-.title {
-  /* font-family: cursive; */
-  /* font-family: "Times New Roman", Times, serif; */
-  font-family: title;
+.titulo__fondo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  height: 180px;
+  width: 37em;
+}
+
+.isotipo {
+  object-fit: contain;
+  transform: scale(0.7);
+  margin-left: -15em;
+  margin-top: -27em;
+}
+
+@media screen and (max-width: 700px) {
+  .titulo {
+    height: 5em;
+    width: 55%;
+  }
+
+  .isotipo {
+    transform: scale(38%);
+    margin-top: -31em;
+    margin-left: -26em;
+  }
 }

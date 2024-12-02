@@ -19,17 +19,16 @@ const preventa = (estado: String) => {
 
 const estadoP = (pieza: number, estado: String) => {
   let est = "";
-  if (pieza >= 1 && estado === "disponible") {
+  if (pieza >= 1 && (estado === "disponible" || estado === "venta")) {
     est = "x" + pieza;
+    console.log(est);
     return est;
-  }
-  if (estado === "preventa") return "P";
+  } else if (estado === "preventa") return "P";
+  else return "0";
 };
 
 function Card(props: Funko) {
   return (
-    // <div id="gallery" className="gallery">
-    //   {Lista.map((props) => (
     <div className={String(conter(props.piezas))}>
       <div className="card__fondo">
         <div className={String(preventa(props.estado))}>
@@ -45,8 +44,6 @@ function Card(props: Funko) {
         <label className="gallery__precio">{"$" + props.precio}</label>
       </div>
     </div>
-    //   ))}
-    // </div>
   );
 }
 
