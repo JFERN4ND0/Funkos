@@ -77,7 +77,6 @@ const Gallery: React.FC = () => {
       </div>
     </div>
   );
-  // }
 };
 
 export default Gallery;
