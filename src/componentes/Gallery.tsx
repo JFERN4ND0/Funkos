@@ -21,7 +21,12 @@ const Gallery: React.FC = () => {
 
   const buscar = (filtro: string) => {
     const est = filtro.toLowerCase();
-    if (est === "preventa" || est === "disponible" || est === "agotado") {
+    if (
+      est === "preventa" ||
+      est === "disponible" ||
+      est === "agotado" ||
+      est === "venta"
+    ) {
       const lis = searchFunkoEstado(String(est));
       setFunkos(lis);
     } else {

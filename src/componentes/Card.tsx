@@ -21,7 +21,6 @@ const estadoP = (pieza: number, estado: String) => {
   let est = "";
   if (pieza >= 1 && (estado === "disponible" || estado === "venta")) {
     est = "x" + pieza;
-    console.log(est);
     return est;
   } else if (estado === "preventa") return "P";
   else return "0";

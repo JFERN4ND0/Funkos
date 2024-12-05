@@ -698,11 +698,11 @@ const Lista: Funko[] = [
     estado: "venta",
   },
   {
-    nombre: "Chimchar #963",
+    nombre: "Chimchar Flocked #963",
     serie: "Pokemon, Pokémon",
     ruta: raiz + "pokemon/chimchar963.png",
-    precio: 300,
-    piezas: 1,
+    precio: 350,
+    piezas: 5,
     estado: "venta",
   },
   {
