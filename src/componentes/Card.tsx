@@ -33,14 +33,20 @@ function Card(props: Funko) {
         <div className={String(preventa(props.estado))}>
           {String(estadoP(props.piezas, props.estado))}
         </div>
-        <label className="gallery__title">{props.nombre}</label>
-        <img
-          className="gallery__img"
-          src={String(props.ruta)}
-          alt={String(props.nombre)}
-        />
+        <div className="title__fondo">
+          <label className="gallery__title">{props.nombre}</label>
+        </div>
+        <div className="img__fondo">
+          <img
+            className="gallery__img"
+            src={String(props.ruta)}
+            alt={String(props.nombre)}
+          />
+        </div>
         <h2 className="agotado">Agotado</h2>
-        <label className="gallery__precio">{"$" + props.precio}</label>
+        <div className="precio__fondo">
+          <label className="gallery__precio">{"$" + props.precio}</label>
+        </div>
       </div>
     </div>
   );

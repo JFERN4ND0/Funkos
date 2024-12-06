@@ -35,8 +35,7 @@
   grid-template-columns: repeat(1, 1fr);
   border-radius: 16px;
   background: radial-gradient(rgb(92, 22, 184) 65%, rgb(12, 12, 12) 100%);
-  /*  */
-  object-fit: cover;
+  /* object-fit: cover; */
   view-timeline: --reveal;
   animation-name: show;
   animation-fill-mode: both;
@@ -60,15 +59,21 @@
 
 .gallery__title,
 .gallery__precio {
-  width: 100%;
   color: rgb(93, 126, 156);
   font-family: "cuerpo";
 }
 
+.title__fondo {
+  height: 4em;
+}
+
 .gallery__img {
-  /* width: 250px; */
-  width: 100%;
-  /* height: 270px; */
+  height: 230px;
+}
+
+.img__fondo {
+  width: auto;
+  object-fit: cover;
 }
 
 .sin_piezas {
@@ -84,9 +89,6 @@
   margin-left: 11%;
   margin-right: 11%;
   margin-top: 4%;
-  /* margin-left: 1.9em;
-  margin-right: 1.9em;
-  margin-top: 0.8em; */
   background-color: rgba(255, 0, 78, 0.35);
   transition: transform 0.4s;
   border-radius: 16px;

@@ -389,7 +389,7 @@ const Lista: Funko[] = [
     nombre: "Santa Jack #1383",
     serie: "Disney",
     ruta: raiz + "disney/santaJack1383.png",
-    precio: 650,
+    precio: 350,
     piezas: 1,
     estado: "venta",
   },
