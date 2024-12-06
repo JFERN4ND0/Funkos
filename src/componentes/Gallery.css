@@ -39,6 +39,7 @@
   .titulo {
     height: 5em;
     width: 55%;
+    overflow: hidden;
   }
 
   .isotipo {
