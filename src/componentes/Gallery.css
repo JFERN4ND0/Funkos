@@ -19,6 +19,7 @@
 .titulo__fondo {
   width: 100%;
   display: flex;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
 }
@@ -39,7 +40,6 @@
   .titulo {
     height: 5em;
     width: 55%;
-    overflow: hidden;
   }
 
   .isotipo {

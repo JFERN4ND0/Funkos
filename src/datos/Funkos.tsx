@@ -186,9 +186,9 @@ const Lista: Funko[] = [
     estado: "venta",
   },
   {
-    nombre: "Luffi & Foxy #2",
+    nombre: "Luffy & Foxy #2",
     serie: "One Piece",
-    ruta: raiz + "onePiece/luffi&foxy2.png",
+    ruta: raiz + "onePiece/luffy&foxy2.png",
     precio: 650,
     piezas: 1,
     estado: "venta",

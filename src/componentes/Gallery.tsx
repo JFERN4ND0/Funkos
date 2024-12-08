@@ -3,6 +3,7 @@ import {
   searchFunkoEstado,
   searchFunkoName,
   searchFunkos,
+  searchFunkoSerie,
 } from "../datos/FunkosApi";
 import Card from "./Card";
 import "./Gallery.css";
@@ -33,6 +34,8 @@ const Gallery: React.FC = () => {
       const lis = searchFunkoName(String(filtro));
       setFunkos(lis);
     }
+    const lis = searchFunkoSerie(String(filtro));
+    setFunkos(lis);
   };
 
   return (
@@ -54,7 +57,7 @@ const Gallery: React.FC = () => {
             const formData = new FormData(formulario);
             const formJson = Object.fromEntries(formData.entries());
             // buscar(String(ev.target[0].value));
-            buscar(String(formJson.filtro));
+            buscar(formJson.filtro.toString());
           }}
         >
           <input
