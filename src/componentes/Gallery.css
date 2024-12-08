@@ -11,6 +11,10 @@
   padding: 3px;
 }
 
+.filtro-button:active {
+  transform: scale(0.8);
+}
+
 @font-face {
   font-family: title;
   src: url("../assets/fonts/Mackenzin.otf");
