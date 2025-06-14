@@ -11,7 +11,7 @@ const conter = (cant: number) => {
 
 const preventa = (estado: String) => {
   let exis = "";
-  if (estado === "preventa") {
+  if (estado === "preventa" || estado === "Preventa") {
     exis = "preventa";
   }
   return "cantidad-funko " + exis;
@@ -22,7 +22,7 @@ const estadoP = (pieza: number, estado: String) => {
   if (pieza >= 1 && (estado === "disponible" || estado === "venta")) {
     est = "x" + pieza;
     return est;
-  } else if (estado === "preventa") return "P";
+  } else if (estado === "preventa" || estado === "Preventa") return "P";
   else return "0";
 };
 
