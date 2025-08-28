@@ -22,8 +22,9 @@ const estadoP = (pieza: number, estado: String) => {
   if (pieza >= 1 && (estado === "disponible" || estado === "venta")) {
     est = "x" + pieza;
     return est;
-  } else if (estado === "preventa" || estado === "Preventa") return "P";
-  else return "0";
+  } else if (estado === "preventa" || estado === "Preventa") {
+    return "P";
+  } else return "0";
 };
 
 function Card(props: Funko) {
